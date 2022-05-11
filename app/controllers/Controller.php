@@ -12,7 +12,7 @@ class Controller {
         if (function_exists($funtionName)) {
             call_user_func($funtionName);
         } else {
-            throw new BadFunctionCallException("funcao nao existe");
+            throw new BadFunctionCallException("Usecase not exists");
         }
     }
 
