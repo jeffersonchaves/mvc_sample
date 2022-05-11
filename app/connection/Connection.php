@@ -27,6 +27,7 @@ class Connection {
         try {
             $this->connection = new PDO('mysql:host='.self::HOST.';',self::USER,self::PASS);
 
+            //CRIA UMA BASE DE DADOS
             $this->connection->query("CREATE DATABASE IF NOT EXISTS " . self::NAME);
             $this->connection->query("use " . self::NAME);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
